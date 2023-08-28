@@ -1,0 +1,201 @@
+*{
+    padding: o;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* header */
+header{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    left: 0;
+    
+}
+header a{
+    color: white;
+}
+header .nav-item {
+    margin-left: 20px;
+}
+header .nav-item a{
+    position: relative;
+}
+header .active a,
+header a.nav-link:hover{
+    color: green;
+}
+header .nav-item a::before{
+    content: "";
+    position: absolute;
+    width:0;
+    height: 5px;
+    background-color: green;
+    left: 0;
+    bottom: 0;
+    display: block;
+   
+    transition: all 0.5s;
+}
+header .nav-item a:hover:before,
+header .active a::before{
+    width: 100%;
+}
+
+/* banner */
+.banner .carousel-item img{
+    height: 100vh;
+    min-height: 500px;
+    object-fit: cover;
+}
+.banner .carousel-caption img{
+    width: 200px;
+    height: 200px;
+    min-height: unset;
+    border-radius: 50%;
+}
+.banner .carousel-caption{
+    bottom: 50%;
+    transform: translateY(50%)
+}
+.carousel-item::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.carousel-indicators li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+.carousel-indicators li.active{
+    background-color: green;
+    
+}
+
+/* projects */
+.project__tabs .nav{
+    justify-content: center;
+}
+.project__tabs .nav-pills .nav-link.active{
+    border: none;
+    color: white;
+    background: #35a22c;
+}
+.project__tabs .nav-pills .nav-link{
+    border: 1px solid #000;
+    text-transform:capitalize;
+    
+}
+.project__tabs .nav-item{
+    margin: 0 20px;
+}
+.project_.nav-item a{
+    color: blue;
+
+}
+
+/* project items */
+.project__item{
+    padding: 15px;
+}
+.project__item .card{
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border: none;
+}
+.project__item .card-body h5{
+    font-size: 1.25rem;
+    transition: all .5s;
+}
+.project__item .card-body p{
+    font-size: 14px;
+    color: #585858;
+}
+.project__item .card-body{
+    border: 1px solid transparent;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top: transparent;
+    transition: all .5s;
+}
+.project__item:hover .card-body{
+    border: 1px solid #35a22c;
+    border-top: transparent;
+}
+.project__item h5:hover{
+
+}
+
+/* expeirence */
+.experience{
+    background-image: url(/image-myportfolio/3.jpg);
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    
+}
+.experience::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+    
+.experience__items{
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid white;
+    backdrop-filter: blur(3px);
+    transition: all .3s;
+
+}
+.experience__items:hover{
+    background: #000;
+    cursor: pointer;
+}
+.experience__items i{
+    font-size: 40px;
+    color: #35a22c;
+}
+/* footer */
+ footer{
+    background: #000;
+    height: 300px;
+    width: 100%; 
+}
+/* responesive */
+/* @media screen and (max-width:992px) {
+    footer{
+        background: green;
+    }
+    
+}
+@media screen and (max-width:700px) {
+    footer{
+        background: red;
+    }
+    
+} */ 
+@media screen and (min-width:992px) {
+    footer{
+        background: orange;
+    }
+}
+@media screen and (min-width:1200px) {
+    footer{
+        background: purple;
+    }
+}
